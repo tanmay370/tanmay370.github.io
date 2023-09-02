@@ -1,0 +1,209 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="container ">
+        <header class="d-flex flex-wrap justify-content-center py-3  border-bottom">
+            <a href="../index.html"
+                class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
+                <svg class="bi me-2" width="40" height="32">
+                    <use xlink:href="#bootstrap"></use>
+                </svg>
+                <span class="fs-4">Dare2Grow</span>
+            </a>
+
+            <ul class="nav nav-pills">
+                <li class="nav-item"><a href="../index.html" class="nav-link active" aria-current="page">Home</a></li>
+                <li class="nav-item"><a href="../blog.html" class="nav-link">Blog</a></li>
+                <li class="nav-item"><a href="../code.html" class="nav-link">Code</a></li>
+                <li class="nav-item"><a href="../about.html" class="nav-link">About</a></li>
+            </ul>
+        </header>
+    </div>
+    <!-- This is container for HTML5 api -->
+    <div class="container">
+        <article class="blog-post">
+            <h2 class="blog-post-title">HTML5 APIs</h2>
+            <p class="blog-post-meta"><i>13 May 2023 by Tanmay</i></p>
+            <hr>
+        </article>
+        <div class="row mb-5">
+            <div class="col">
+                <p>There are basically three types of API in HTML5 :</p>
+                <ul>
+                    <li><b>Web Storage API</b><br>
+                        The Web Storage API provides a way to store data in the user's browser. It offers two
+                        mechanisms: <span class="text-danger">localStorage</span> and <span
+                            class="text-danger">sessionStorage</span>. Both provide a key-value pair storage interface
+                    </li>
+                    <li><b>Web Workers API:</b><br>
+                        The Web Workers API allows web applications to run JavaScript code in the background, separate
+                        from the main UI thread.</li>
+                    <li><b>Geolocation API:</b><br>
+                        The Geolocation API allows web applications to access the user's geographical location
+                        information. </li>
+                </ul>
+            </div>
+            <div class="col">
+                <figure class="figure mt-3">
+                    <img src="../img/HTML_api.png" alt="" class="figure-img img-fluid rounded border border-dark w-50">
+                    <figcaption class="figure-caption"> <i>HTML APIs</i></figcaption>
+                </figure>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        
+    </div>
+    <div class="container">
+        <article class="blog-post">
+            <h2 class="blog-post-title">Display - Flexbox</h2>
+            <p class="blog-post-meta"><i>08 May 2023 by Tanmay</i></p>
+            <hr>
+        </article>
+        <div class="container">
+            <div class="row mb-3 d-flex justify-content-center align-items-center">
+                <div class="col mx-5">
+                    <figure class="figure">
+                        <img src="../img/display.png" class="figure-img img-fluid rounded border border-dark w-50"
+                            alt="A generic square placeholder image with rounded corners in a figure.">
+                        <figcaption class="figure-caption">Display - Block, inline-block, inline.</figcaption>
+                    </figure>
+                </div>
+                <div class="col">
+                    <figure class="figure">
+                        <img src="../img/display.png" class="figure-img img-fluid rounded w-50"
+                            alt="A generic square placeholder image with rounded corners in a figure.">
+                        <figcaption class="figure-caption">Display - Flexbox</figcaption>
+                    </figure>
+    
+                </div>
+                <div class="col">
+                    <figure class="figure">
+                        <img src="../img/display.png" class="figure-img img-fluid rounded border border-dark w-50"
+                            alt="A generic square placeholder image with rounded corners in a figure.">
+                        <figcaption class="figure-caption">Display - Grid</figcaption>
+                    </figure>
+                </div>
+            </div>
+        </div>
+        <figure class="d-flex w-75">
+            <img src="../img/justify_content.png" alt="" class="figure-img img-fluid rounded w-50 mx-3">
+            <img src="../img/align_items.png" alt="" class="figure-img img-fluid rounded w-50">
+        </figure>
+        <p class="blog">Flexbox is layout module have following terms</p>
+        <div class="row">
+            <div class="col"><b>Parent Container</b>
+                <div class="col">
+                    <ul>
+                        <li><b>Justify Content</b>
+                            <p>
+                                <i>Horizontal, x-axis, Landscape, main-axis</i>
+                            </p>
+                        </li>
+                        <li><b>Align Items (space b/w rows)</b>
+                            <p>
+                                <i>Vertical, y-axis, Portrait, cross-axis</i>
+                            </p>
+                        </li>
+                        <li><b>Align Content (no space b/w rows)</b>
+                            <p>
+                                <i>space-around, space-between, start, end, stretch</i>
+                            </p>
+                        </li>
+                        <li><b>Flex-Wrap</b>
+                            <p>
+                                <i>nowrap, wrap, wrap-reverse</i>
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+            <div class="col"><b>Child Container</b>
+                <div class="col">
+                    <ul>
+                        <li><b> Align Self (align child in y-axis)</b>
+                            <p>
+                                <i>flex-start, flex-end, center, stretch</i>
+                            </p>
+                        </li>
+                        <li>Order</li>
+                        <li><b>Flex-basis</b>
+                            <p>
+                                <i>Control width of child container individually</i>
+                            </p>
+                        <li><b>Flex-grow</b>
+                            <p>
+                                <i>Higher the number higher it will grow relative to other children</i>
+                            </p>
+                        </li>
+                        <li><b>Flex-shrink</b>
+                            <p>
+                                <i>Higher the number higher it will shrink relative to other children</i>
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="container border border-dark">
+            <div class="row">
+                <div class="col"> 1.0 Flex-direction:row (default)</div>
+                <div class="col">
+                    <figure class="figure">
+                        <img src="../img/display.png" class="figure-img img-fluid rounded w-50"
+                            alt="A generic square placeholder image with rounded corners in a figure.">
+                        <figcaption class="figure-caption">1.0 Flex-direction:row (default)</figcaption>
+                    </figure>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">1.1 Flex-direction:row-reverse</div>
+                <div class="col">
+                    <figure class="figure">
+                        <img src="../img/row_reverse.png" class="figure-img img-fluid rounded w-50"
+                            alt="A generic square placeholder image with rounded corners in a figure.">
+                        <figcaption class="figure-caption">1.1 Flex-direction:row-reverse</figcaption>
+                    </figure>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">2.0 Flex-direction:column</div>
+                <div class="col">
+                    <figure class="figure">
+                        <img src="../img/column.png" class="figure-img img-fluid rounded w-25"
+                            alt="A generic square placeholder image with rounded corners in a figure.">
+                        <figcaption class="figure-caption">2.0 Flex-direction:column</figcaption>
+                    </figure>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">2.1 Flex-direction:column-reverse</div>
+                <div class="col">
+                    <figure class="figure">
+                        <img src="../img/column_reverse.png" class="figure-img img-fluid rounded w-25"
+                            alt="A generic square placeholder image with rounded corners in a figure.">
+                        <figcaption class="figure-caption">2.1 Flex-direction:column-reverse</figcaption>
+                    </figure>
+                </div>
+            </div>
+        </div>
+        </article>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
