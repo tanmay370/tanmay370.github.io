@@ -27,5 +27,124 @@
             </ul>
         </header>
     </div>
+    <div class="container">
+        <article class="blog-post">
+            <h2 class="blog-post-title">MongoDb</h2>
+            <p class="blog-post-meta"><i>06 September 2023 by Tanmay</i></p>
+            <hr>
+            <p>
+               <b>mongo:</b> The command -line
+               shell that connects to a specific instance of mongod.
+            </p>
+            <p>
+               <b>mongod:</b> It is basically the host process for the [Mongo Daemon] database.
+            </p>
+            <h4>Terminology bt MySql & MongoDb </h4>
+            <table class="table table-striped table-hover">
+                <thead>
+                    <th>SQL term</td>
+                    <th>MongoDb term</td>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>Database</td>
+                    <td>Database</td> 
+                </tr>
+                <tr>
+                    <td>Tables</td>
+                    <td>collections</td>
+                </tr>
+                <tr>
+                    <td>Rows</td>
+                    <td>document (BSON)</td>
+                </tr>
+                <tr>
+                    <td>Columns</td>
+                    <td>fields</td>
+                </tr>
+            </tbody>
+            </table>
+            <p>
+                <b>MondoDb Compass:</b> Desktop version of mongoDb.It gives <i>cloud facilities</i>
+             </p>
+        </article>
+
+        <article class="blog-post">
+            <h2 class="blog-post-title">Database Commands</h2>
+            <ol class="list-group list-group-numbered py-2 list-group-item-primary">
+                <li class="list-group-item">View all databases
+                <div class="fw-bold px-3 ">show dbs</div>
+                </li>
+                <li class="list-group-item">Create a new or switch databases
+                <div class="fw-bold px-3 ">use dbName</div>
+                </li>
+                <li class="list-group-item">View current database
+                <div class="fw-bold px-3 ">db</div>
+                </li>
+                <li class="list-group-item">Delete database
+                <div class="fw-bold px-3 ">db.dropDatabase</div>
+                </li>                
+              </ol>
+            <h2 class="blog-post-title">Collection Commands</h2>
+            <ol class="list-group list-group-numbered py-3 list-group-item-primary">
+                <li class="list-group-item">Show collections
+                <div class="fw-bold px-3 ">show collections</div>
+                </li>
+                <li class="list-group-item">Create a collection named <i>'comments'</i>
+                <div class="fw-bold px-3 ">db.createCollection ('comments')</div>
+                </li>
+                <li class="list-group-item">Drop a collection named <i>'comments'</i>
+                <div class="fw-bold px-3 ">db.comments.drop()</div>
+                </li>
+                             
+              </ol>
+            <h2 class="blog-post-title">Document(Row) Commands</h2>
+            <ol class="list-group list-group-numbered py-2 list-group-item-primary">
+                <li class="list-group-item">Show all rows in a collection
+                <div class="fw-bold px-3 ">db.comments.find()</div>
+                </li>
+                <li class="list-group-item">Show all rows in a collection in pretty format
+                <div class="fw-bold px-3 ">db.comments.find().pretty()</div>
+                </li>
+                <li class="list-group-item">Insert one Row
+                <div class="fw-bold px-3 ">db.comments.insert({ }) --> <i>Takes an object</i></div>
+                </li>
+                <li class="list-group-item">Insert many Rows
+                <div class="fw-bold px-3 ">db.comments.insertMany([ { } ]) --> <i>Takes an array</i></div>
+                </li>                
+                <li class="list-group-item">Find the first row matching the object
+                <div class="fw-bold px-3 ">db.comments.findOne ({name: 'Sara'})</div>
+                </li>                
+              </ol>
+        </article>
+
+        <article class="blog-post">
+            <h2 class="blog-post-title">Search in Mongodb </h2>
+            <ol class="list-group list-group-numbered py-2 list-group-item-primary">
+                <li class="list-group-item">Search in MongoDb database
+                <div class="fw-bold px-3 ">db.comments.find( { lang: 'Python' } )</div>
+                </li>
+                <li class="list-group-item">Limit the number of rows in output
+                <div class="fw-bold px-3 ">db.comments.find().limit(2)</div>
+                </li>
+                <li class="list-group-item">Count the number of rows in output
+                <div class="fw-bold px-3 ">db.comments.find().count()</div>
+                </li>
+                <li class="list-group-item">Count the number of rows according to a filter
+                <div class="fw-bold px-3 ">db.comments.find( { lang: 'Python' } ).count()</div>
+                </li>                
+              </ol>
+            <h2 class="blog-post-title">Sort in MongoDb database</h2>
+            <ol class="list-group list-group-numbered py-2 list-group-item-primary">
+                <li class="list-group-item">Sort in increasing order
+                <div class="fw-bold px-3 ">db.comments.find().sort ( { member_since : 1 } ).pretty()</div>
+                </li>
+                <li class="list-group-item">Sort in decreasing order
+                <div class="fw-bold px-3 ">db.comments.find().sort ( { member_since : 1 } ).pretty()</div>
+                </li>             
+              </ol>
+        </article>
+        <p>More more complex commands<a href="https://www.mongodb.com/docs/manual/core/databases-and-collections/" class="text-decoration-none"> Vist docs</a></p>
+    </div>
 </body>
 </html>

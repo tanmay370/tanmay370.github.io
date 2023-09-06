@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,6 +9,7 @@
         integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
+
 <body>
     <div class="container ">
         <header class="d-flex flex-wrap justify-content-center py-3  border-bottom">
@@ -27,5 +29,92 @@
             </ul>
         </header>
     </div>
+    <div class="container">
+        <h2 class="blog-post-title">MySql</h2>
+        <p class="blog-post-meta"><i>06 September 2023 by Tanmay</i></p>
+        <hr>
+        <h2 class="blog-post-title">Database Commands</h2>
+        <ol class="list-group list-group-numbered py-2 list-group-item-primary">
+            <li class="list-group-item">Create database
+                <div class="fw-bold px-3 ">create database student;</div>
+                <samp>Create database databaseName;</samp>
+            </li>
+            <li class="list-group-item">Show databases
+                <div class="fw-bold px-3 ">show databases;</div>
+                <samp>To see all databases in MySql</samp>
+            </li>
+            <li class="list-group-item">Switch databases
+                <div class="fw-bold px-3 ">use databaseName;</div>
+                <samp>To go into particular database in MySql</samp>
+            </li>
+        </ol>
+        <h2 class="blog-post-title">Tables Commands</h2>
+        <ol class="list-group list-group-numbered py-2 list-group-item-primary">
+            <li class="list-group-item">Show Tables
+                <div class="fw-bold px-3 ">show tables;</div>
+                <samp>To see tables in particular database</samp>
+            </li>
+            <li class="list-group-item">Create Table
+                <div class="fw-bold px-3 ">create table table_name (<br>
+                Attribute1 datatype constraints, <br>
+                Attribute2 datatype, <br>
+                primary key (Attribute1));
+                </div>
+            </li>
+            <li class="list-group-item">Table Description
+                <div class="fw-bold px-3 ">describe table_name;</div>
+                <samp>To see schema of table</samp>
+            </li>            
+            <li class="list-group-item">Table Data Description
+                <div class="fw-bold px-3 ">select * from table_name;</div>
+                <samp>To see full table with data</samp>
+            </li>            
+            <li class="list-group-item">Change Table name
+                <div class="fw-bold px-3 ">alter table faculty rename staff;</div>
+                <samp>alter table tableName rename aliasname</samp>
+            </li>            
+        </ol>
+        <h2 class="blog-post-title">Rows & Columns Commands</h2>
+        <ol class="list-group list-group-numbered py-2 list-group-item-primary">
+            <li class="list-group-item">Insert Data
+                <div class="fw-bold px-3 ">insert into table_name values ( 1, "Ashish");</div>
+                <samp>To enter values in tables</samp>
+            </li>
+            <li class="list-group-item">Update Column value
+                <div class="fw-bold px-3 ">update student set age = 23 where name = 'Sandhya';
+                </div>
+                <samp>update table_name set attributeName = aliasname where attribute = existing value;</samp>
+            </li>
+            <li class="list-group-item">Change table schema
+                <div class="fw-bold px-3 ">describe table_name;</div>
+                <samp>alter table table_name modify attribute datatype;</samp>
+            </li>            
+            <li class="list-group-item">Add column
+                <div class="fw-bold px-3 ">alter table student add Fees double;</div>
+                <samp>alter table table_name add attribute datatype</samp>
+            </li>            
+        </ol>
+        <h2 class="blog-post-title">CRUD Commands</h2>
+        <ol class="list-group list-group-numbered py-2 list-group-item-primary">
+            <li class="list-group-item">Count number of rows
+                <div class="fw-bold px-3 "></div>
+                <samp>select count(*) from tableName</samp>
+            </li>
+            <li class="list-group-item">Reading data from Two tables
+                <div class="fw-bold px-3 "></div>
+                <samp>select attribute_name, attribute_name from <br>table_name, table_name <br>where <br>tablename.attribute = tablename.attribute</samp>
+            </li>
+            <li class="list-group-item">Reading data from two tables using aliasname for table
+                <div class="fw-bold px-3 "></div>
+                <samp>select attribute_name, attribute_name from <br>table_name whitespace aliasname,<br> table_name whitespace aliasname<br>where <br>aliasname.attribute = aliasname.attribute</samp>
+            </li>
+            <li class="list-group-item">Reading data from two tables using aliasname for table
+                <div class="fw-bold px-3 "></div>
+                <samp>select attribute_name, attribute_name from <br>table_name whitespace aliasname,<br> table_name whitespace aliasname<br>where <br>aliasname.attribute = aliasname.attribute</samp>
+            </li>      
+        </ol>
+        <p>More more complex commands<a href="https://dev.mysql.com/doc/mysql-getting-started/en/#mysql-getting-started-basic-ops" class="text-decoration-none"> Vist docs</a></p>
+    </div>
 </body>
+
 </html>
