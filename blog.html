@@ -99,7 +99,69 @@
         <pre class="bg-dark text-light rounded pt-3"> $ deactivate
     </pre>
     </div>
+    <!-- Forth jumbotron section -->
+    <div class="jumbotron">
+      <h1 class="display-6">Backend Structure Python (Django)</h1>
+      <p class="lead">
+        What is Django | How to create | Usage
+      </p>
+      <hr class="my-4">
+      <p><i> Django is a free and open-source, Python-based web framework that follows the model–template–views (MTV) architectural pattern.</i></p>
+      <pre class="bg-dark text-light rounded pt-3">    <b class="text-warning"># For creating APIs DRF is used </b>
+        python -m pip install djangorestframework  <br>
+      <b class="text-warning"># Install django using </b>  
+        python -m pip install django
+       </pre>
+      <b class="text-success">Now in which ever directory you are, this line below will create a django file structure there (recommended activate virtual environment)
+        </p>
+        <pre class="bg-dark text-light rounded pt-3">    <b class="text-warning"># For creating project structure use </b>
+        django-admin startproject ProjectName  <br>
+      <b class="text-warning"># Parent & child folder have same name (ProjectName) so</b>  
+        cd ProjectName <br>
+      <b class="text-warning"># Create an app</b>  
+        django-admin startapp erp_app  <br>
+      <b class="text-warning"># To run the local server</b>  
+        python manage.py runserver     
+         </pre>
+        <p>When you make db classes in <i>models.py</i> then below cmd will make a folder <i>migrations</i>, inside it next cmd will create query mapper (fileName <i>0001</i>)
+        </p>
+        <pre class="bg-dark text-light rounded pt-3">    <b class="text-warning"># To generate the related SQL query mapper via ORM(Object RElational Mapper)</b>  
+        python manage.py makemigrations <br>
+      <b class="text-warning"># To create the table in the specified database</b>  
+        python manage.py migrate
+      </pre>
+      <pre class="bg-dark text-light rounded pt-3">
+      erp
+        erp
+          <b class="text-warning"># Tells that the parent folder is a package, anything you want to run when app load resides here</b>
+          __init__.py 
+          asgi.py
+          <b class="text-warning">#Looks for required APPS, MIDDLEWARE, TEMPLATES, DATABASES.</b>
+          |settings.py 
+          <b class="text-warning">#All endpoints resides here, '' is the index page by default.</b>
+          urls.py 
+          <b class="text-warning">#Web server gateway interface a project type.</b>
+          wsgi.py   
+        <b class="text-warning">#Created by us to start building app, one project can have multiple apps.</b>
+        erp_app     
+          __pycache
+          <b class="text-warning">#This folder have file consisting of db queries generated against our db classes (models.py).</b>
+          migration 
+          __init__.py
+          <b class="text-warning">#Created by default.</b>
+          admin.py 
+          <b class="text-warning">#For app configuration.</b>
+          apps.py   
+          <b class="text-warning">#Database classes resides here.</b>
+          models.py   
+          tests.py
+          <b class="text-warning">#All business logic resides here.</b>
+          views.py    
+      </pre>
+    </div>
   </div>
+  
+</div>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
     crossorigin="anonymous"></script>
